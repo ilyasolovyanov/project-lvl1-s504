@@ -6,3 +6,6 @@ start:
 
 publish:
 		npm publish --dry-run
+
+check:
+	./node_modules/.bin/eslint ./src
