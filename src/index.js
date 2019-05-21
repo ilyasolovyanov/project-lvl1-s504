@@ -1,8 +1,6 @@
-const readlineSync = require('readline-sync');
+import readlineSync from 'readline-sync';
 
-const hello = () => {
-  const userName = readlineSync.question('May I have your name? ');
+export default () => {
+  const userName = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${userName}!`);
 };
-
-module.exports = hello;

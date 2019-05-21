@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const hello = require('../index');
+import hello from '../index';
 
 console.log('Welcome to the Brain Games!');
 
