@@ -22,3 +22,6 @@ $ brain-calc
 ```bash
 $ brain-gcd
 ```
+```bash
+$ brain-progression
+```
