@@ -16,3 +16,6 @@ $ brain-games
 ```bash
 $ brain-even
 ```
+```bash
+$ brain-calc
+```
