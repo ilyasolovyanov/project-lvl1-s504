@@ -6,16 +6,7 @@
 
 ### Build and Install Package
 ```bash
-$ npm i
-```
-```bash
-$ make build
-```
-```bash
-$ make publish
-```
-```bash
-$ npm link
+$ curl https://raw.githubusercontent.com/ilyasolovyanov/project-lvl1-s504/master/install.sh | sh
 ```
 
 ### Run Games
