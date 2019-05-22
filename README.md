@@ -4,12 +4,21 @@
 
 ## Usage
 
-### Install package
+### Build and Install Package
+```bash
+$ npm i
+```
+```bash
+$ make build
+```
+```bash
+$ make publish
+```
 ```bash
 $ npm link
 ```
 
-### Run games
+### Run Games
 ```bash
 $ brain-games
 ```
