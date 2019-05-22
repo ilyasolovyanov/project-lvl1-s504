@@ -19,3 +19,6 @@ $ brain-even
 ```bash
 $ brain-calc
 ```
+```bash
+$ brain-gcd
+```

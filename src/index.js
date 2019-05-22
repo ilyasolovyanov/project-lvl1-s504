@@ -37,6 +37,23 @@ export const calc = () => {
   return retunContainer;
 };
 
+export const gcd = () => {
+  const a = randomInt(100);
+  const b = randomInt(50);
+  let al = a;
+  let bl = b;
+
+  while (al !== bl) {
+    if (al > bl) {
+      al -= bl;
+    } else {
+      bl -= al;
+    }
+  }
+
+  return [`${a} ${b}`, al.toString()];
+};
+
 const question = (core, username) => {
   const coreContainer = core();
   const expression = coreContainer[0];
@@ -56,7 +73,6 @@ const question = (core, username) => {
 
 export const startGame = (log, core, rounds) => {
   welcome();
-  console.log('Answer "yes" if number even otherwise answer "no".');
   const username = hello();
   let win = true;
   let correctCounter = 0;
@@ -79,5 +95,9 @@ export const logs = {
   calc: {
     log: 'What is the result of the expression?',
     core: calc,
+  },
+  gcd: {
+    log: 'Find the greatest common divisor of given numbers.',
+    core: gcd,
   },
 };
