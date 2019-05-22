@@ -71,13 +71,14 @@ const question = (core, username) => {
   return answerContainer;
 };
 
-export const startGame = (log, core, rounds) => {
+export const startGame = (game, rounds) => {
   welcome();
+  console.log(game.log);
   const username = hello();
   let win = true;
   let correctCounter = 0;
   while (correctCounter < rounds) {
-    if (question(core, username)) {
+    if (question(game.core, username)) {
       correctCounter += 1;
     } else {
       correctCounter = rounds;

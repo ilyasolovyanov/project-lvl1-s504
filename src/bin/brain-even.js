@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import {
-  startGame, even, logs,
+  startGame, logs,
 } from '..';
 
-startGame(logs.even, even, 3);
+startGame(logs.even, 3);

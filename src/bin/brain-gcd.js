@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import {
-  startGame, gcd, logs,
+  startGame, logs,
 } from '..';
 
-startGame(logs.gcd, gcd, 3);
+startGame(logs.gcd, 3);
