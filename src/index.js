@@ -10,6 +10,7 @@ export const hello = () => {
 
 const randomInt = num => Math.floor(Math.random() * num);
 
+// games
 export const even = () => {
   const expression = randomInt(100);
   return [expression, (expression % 2 === 0) ? 'yes' : 'no'];
@@ -54,6 +55,26 @@ export const gcd = () => {
   return [`${a} ${b}`, al.toString()];
 };
 
+export const progression = () => {
+  const a = randomInt(100);
+  const d = randomInt(5);
+  const n = 10;
+  const str = [];
+  let counter = a;
+
+  for (let i = 0; i < n; i += 1) {
+    counter += d;
+    str.push(counter);
+  }
+
+  const randomNum = randomInt(str.length);
+  const correctAnswer = str[randomNum];
+  str[randomNum] = '..';
+
+  return [`${str}`.replace(/,/g, ' '), correctAnswer.toString()];
+};
+
+// question checker
 const question = (core, username) => {
   const coreContainer = core();
   const expression = coreContainer[0];
@@ -71,6 +92,7 @@ const question = (core, username) => {
   return answerContainer;
 };
 
+// game start
 export const startGame = (game, rounds) => {
   welcome();
   console.log(game.log);
@@ -88,6 +110,7 @@ export const startGame = (game, rounds) => {
   if (win) { console.log(`Congratulations, ${username}!`); }
 };
 
+// games logs
 export const logs = {
   even: {
     log: 'Answer "yes" if number even otherwise answer "no".',
@@ -100,5 +123,9 @@ export const logs = {
   gcd: {
     log: 'Find the greatest common divisor of given numbers.',
     core: gcd,
+  },
+  progression: {
+    log: 'What number is missing in the progression?',
+    core: progression,
   },
 };
