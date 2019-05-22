@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import {
   hello, welcome,
-} from '..';
+} from '../games/games';
 
 welcome();
 hello();

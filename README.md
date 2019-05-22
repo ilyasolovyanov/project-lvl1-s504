@@ -25,3 +25,6 @@ $ brain-gcd
 ```bash
 $ brain-progression
 ```
+```bash
+$ brain-prime
+```
