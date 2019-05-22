@@ -9,3 +9,6 @@ publish:
 
 lint:
 	npx eslint
+
+build:
+	npm run-script build
