@@ -8,14 +8,40 @@ export const hello = () => {
   return username;
 };
 
-const getRandomInt = (min, max) => (
-  Math.floor(Math.random() * (max - min)) + min
-);
+const randomInt = num => Math.floor(Math.random() * num);
 
-const question = (username) => {
-  const number = getRandomInt(1, 100);
-  const correctAnswer = (number % 2 === 0) ? 'yes' : 'no';
-  console.log(`Question: ${number}`);
+export const even = () => {
+  const expression = randomInt(100);
+  return [expression, (expression % 2 === 0) ? 'yes' : 'no'];
+};
+
+export const calc = () => {
+  const operations = ['plu', 'min', 'mul'];
+  const operation = operations[randomInt(operations.length)];
+  const a = randomInt(100);
+  const b = randomInt(50);
+
+  let retunContainer;
+
+  switch (operation) {
+    case 'plu':
+      retunContainer = [`${a} + ${b}`, (a + b).toString()];
+      break;
+    case 'min':
+      retunContainer = [`${a} - ${b}`, (a - b).toString()];
+      break;
+    default:
+      retunContainer = [`${a} * ${b}`, (a * b).toString()];
+  }
+
+  return retunContainer;
+};
+
+const question = (core, username) => {
+  const coreContainer = core();
+  const expression = coreContainer[0];
+  const correctAnswer = coreContainer[1];
+  console.log(`Question: ${expression}`);
   const userAnswer = readlineSync.question('Your answer: ');
   let answerContainer = false;
 
@@ -28,18 +54,30 @@ const question = (username) => {
   return answerContainer;
 };
 
-export const brainEvenStart = () => {
+export const startGame = (log, core, rounds) => {
+  welcome();
   console.log('Answer "yes" if number even otherwise answer "no".');
   const username = hello();
   let win = true;
   let correctCounter = 0;
-  while (correctCounter < 3) {
-    if (question(username)) {
+  while (correctCounter < rounds) {
+    if (question(core, username)) {
       correctCounter += 1;
     } else {
-      correctCounter = 3;
+      correctCounter = rounds;
       win = false;
     }
   }
   if (win) { console.log(`Congratulations, ${username}!`); }
+};
+
+export const logs = {
+  even: {
+    log: 'Answer "yes" if number even otherwise answer "no".',
+    core: even,
+  },
+  calc: {
+    log: 'What is the result of the expression?',
+    core: calc,
+  },
 };

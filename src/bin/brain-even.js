@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import { brainEvenStart, welcome } from '..';
+import {
+  startGame, even, logs,
+} from '..';
 
-welcome();
-brainEvenStart();
+startGame(logs.even, even, 3);
