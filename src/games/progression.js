@@ -4,15 +4,14 @@ import {
 
 
 export default () => {
-  const a = randomInt(100);
+  let a = randomInt(100);
   const d = randomInt(5);
   const n = 10;
   const str = [];
-  let counter = a;
 
   for (let i = 0; i < n; i += 1) {
-    counter += d;
-    str.push(counter);
+    a += d;
+    str.push(a);
   }
 
   const randomNum = randomInt(str.length);
