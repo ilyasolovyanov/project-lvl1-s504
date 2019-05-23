@@ -39,4 +39,4 @@ $ brain-progression
 $ brain-prime
 ```
 <img src="https://media.giphy.com/media/iIHBa57lh26XTJ7KrI/giphy.gif" width="500" height="400"/>
-<img src="https://media.giphy.com/media/jrbt9yqSF4joSSiwbD/giphy.gif" width="500" height="400"/>
+<img src="https://media.giphy.com/media/JmZu1B4KVUVI4CFE5c/giphy.gif" width="500" height="400"/>
