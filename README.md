@@ -14,8 +14,8 @@ $ curl https://raw.githubusercontent.com/ilyasolovyanov/project-lvl1-s504/master
 ```bash
 $ brain-even
 ```
-![](https://media.giphy.com/media/U6peoyw3SYgrtLg1gu/giphy.gif)
-![](https://media.giphy.com/media/TfpXDC5lpwRRhPNdfA/giphy.gif)
+<img src="https://media.giphy.com/media/U6peoyw3SYgrtLg1gu/giphy.gif" width="500" height="400"/>
+<img src="https://media.giphy.com/media/TfpXDC5lpwRRhPNdfA/giphy.gif" width="500" height="400"/>
 
 ```bash
 $ brain-calc
