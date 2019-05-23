@@ -15,6 +15,7 @@ $ curl https://raw.githubusercontent.com/ilyasolovyanov/project-lvl1-s504/master
 $ brain-even
 ```
 [![asciicast](https://asciinema.org/a/znpojhacRSbzWlMCVsG64mYqm.svg)](https://asciinema.org/a/znpojhacRSbzWlMCVsG64mYqm)
+
 [![asciicast](https://asciinema.org/a/jyAKjtmol7l3hnn9zbCe2IQXx.svg)](https://asciinema.org/a/jyAKjtmol7l3hnn9zbCe2IQXx)
 
 ```bash
