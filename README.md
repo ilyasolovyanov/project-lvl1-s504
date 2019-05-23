@@ -20,24 +20,23 @@ $ brain-even
 ```bash
 $ brain-calc
 ```
-![](https://media.giphy.com/media/RGjAqQgJbsP7e8DX1C/giphy.gif)
-![](https://media.giphy.com/media/f8bCTXGKtvKz924tDK/giphy.gif)
+<img src="https://media.giphy.com/media/RGjAqQgJbsP7e8DX1C/giphy.gif" width="500" height="400"/>
+<img src="https://media.giphy.com/media/f8bCTXGKtvKz924tDK/giphy.gif" width="500" height="400"/>
 
 ```bash
 $ brain-gcd
 ```
-![](https://media.giphy.com/media/Y35PJgsHRlHADtFfmk/giphy.gif)
-![](https://media.giphy.com/media/hsJOTwtW3JDdarCahT/giphy.gif)
+<img src="https://media.giphy.com/media/Y35PJgsHRlHADtFfmk/giphy.gif" width="500" height="400"/>
+<img src="https://media.giphy.com/media/hsJOTwtW3JDdarCahT/giphy.gif" width="500" height="400"/>
 
 ```bash
 $ brain-progression
 ```
-![](https://media.giphy.com/media/Ifyaz5IhIfl7nkvQKW/giphy.gif)
-![](https://media.giphy.com/media/jrbt9yqSF4joSSiwbD/giphy.gif)
+<img src="https://media.giphy.com/media/Ifyaz5IhIfl7nkvQKW/giphy.gif" width="500" height="400"/>
+<img src="https://media.giphy.com/media/jrbt9yqSF4joSSiwbD/giphy.gif" width="500" height="400"/>
 
 ```bash
 $ brain-prime
 ```
-![](https://media.giphy.com/media/iIHBa57lh26XTJ7KrI/giphy.gif)
-
-![](https://media.giphy.com/media/jrbt9yqSF4joSSiwbD/giphy.gif)
+<img src="https://media.giphy.com/media/iIHBa57lh26XTJ7KrI/giphy.gif" width="500" height="400"/>
+<img src="https://media.giphy.com/media/jrbt9yqSF4joSSiwbD/giphy.gif" width="500" height="400"/>
