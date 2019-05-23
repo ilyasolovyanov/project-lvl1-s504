@@ -14,9 +14,7 @@ $ curl https://raw.githubusercontent.com/ilyasolovyanov/project-lvl1-s504/master
 ```bash
 $ brain-even
 ```
-[![asciicast](https://asciinema.org/a/znpojhacRSbzWlMCVsG64mYqm.svg)](https://asciinema.org/a/znpojhacRSbzWlMCVsG64mYqm)
-
-[![asciicast](https://asciinema.org/a/jyAKjtmol7l3hnn9zbCe2IQXx.svg)](https://asciinema.org/a/jyAKjtmol7l3hnn9zbCe2IQXx)
+![](https://media.giphy.com/media/U6peoyw3SYgrtLg1gu/giphy.gif)
 
 ```bash
 $ brain-calc
