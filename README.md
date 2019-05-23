@@ -39,4 +39,5 @@ $ brain-progression
 $ brain-prime
 ```
 ![](https://media.giphy.com/media/iIHBa57lh26XTJ7KrI/giphy.gif)
+
 ![](https://media.giphy.com/media/jrbt9yqSF4joSSiwbD/giphy.gif)
