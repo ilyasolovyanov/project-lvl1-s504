@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import {
-  startGame, logs,
-} from '..';
+import progression from '../games/progression';
 
-startGame(logs.progression, 3);
+progression();

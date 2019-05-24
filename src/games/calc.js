@@ -1,25 +1,33 @@
-import {
-  randomInt,
-} from './games';
+import startGame from '..';
 
-export default () => {
+const getRandomInt = num => Math.floor(Math.random() * num);
+
+const rules = 'What is the result of the expression?';
+
+const getGameParameters = () => {
   const operations = ['plu', 'min', 'mul'];
-  const operation = operations[randomInt(operations.length)];
-  const a = randomInt(100);
-  const b = randomInt(50);
+  const operation = operations[getRandomInt(operations.length)];
+  const a = getRandomInt(100);
+  const b = getRandomInt(50);
 
   let retunContainer;
+  let answer;
 
   switch (operation) {
     case 'plu':
-      retunContainer = [`${a} + ${b}`, (a + b).toString()];
+      answer = (a + b).toString();
+      retunContainer = [`${a} + ${b}`, answer];
       break;
     case 'min':
-      retunContainer = [`${a} - ${b}`, (a - b).toString()];
+      answer = (a - b).toString();
+      retunContainer = [`${a} - ${b}`, answer];
       break;
     default:
-      retunContainer = [`${a} * ${b}`, (a * b).toString()];
+      answer = (a * b).toString();
+      retunContainer = [`${a} * ${b}`, answer];
   }
 
   return retunContainer;
 };
+
+export default () => startGame(getGameParameters, rules);

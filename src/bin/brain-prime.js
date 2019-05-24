@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import {
-  startGame, logs,
-} from '..';
+import prime from '../games/prime';
 
-startGame(logs.prime, 3);
+prime();
