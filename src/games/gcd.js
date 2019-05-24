@@ -3,18 +3,8 @@ import startGame from '..';
 const getRandomInt = num => Math.floor(Math.random() * num);
 
 const getGCD = (a, b) => {
-  let al = a;
-  let bl = b;
-
-  while (al !== bl) {
-    if (al > bl) {
-      al -= bl;
-    } else {
-      bl -= al;
-    }
-  }
-
-  return al;
+  if (a === 0) return b;
+  return getGCD(b % a, a);
 };
 
 const rules = 'Find the greatest common divisor of given numbers.';
