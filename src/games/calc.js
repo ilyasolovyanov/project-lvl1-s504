@@ -1,33 +1,28 @@
-import startGame from '..';
+import { startGame, getRandomInt } from '..';
 
-const getRandomInt = num => Math.floor(Math.random() * num);
+const description = 'What is the result of the expression?';
+const operations = ['+', '-', '*'];
 
-const rules = 'What is the result of the expression?';
+const generateGameParameters = () => {
+  const operation = operations[getRandomInt(0, operations.length)];
+  const a = getRandomInt(10, 100);
+  const b = getRandomInt(1, 50);
+  const question = `${a} ${operation} ${b}`;
 
-const getGameParameters = () => {
-  const operations = ['plu', 'min', 'mul'];
-  const operation = operations[getRandomInt(operations.length)];
-  const a = getRandomInt(100);
-  const b = getRandomInt(50);
-
-  let retunContainer;
   let answer;
 
   switch (operation) {
-    case 'plu':
+    case '+':
       answer = (a + b).toString();
-      retunContainer = [`${a} + ${b}`, answer];
       break;
-    case 'min':
+    case '-':
       answer = (a - b).toString();
-      retunContainer = [`${a} - ${b}`, answer];
       break;
     default:
       answer = (a * b).toString();
-      retunContainer = [`${a} * ${b}`, answer];
   }
 
-  return retunContainer;
+  return [question, answer];
 };
 
-export default () => startGame(getGameParameters, rules);
+export default () => startGame(generateGameParameters, description);

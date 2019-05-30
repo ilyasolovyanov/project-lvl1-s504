@@ -1,25 +1,27 @@
-import startGame from '..';
+import { startGame, getRandomInt } from '..';
 
-const getRandomInt = num => Math.floor(Math.random() * num);
+const description = 'What number is missing in the progression?';
+const progressionLen = 10;
 
-const rules = 'What number is missing in the progression?';
+const generateGameParameters = () => {
+  let startNumber = getRandomInt(10, 100);
 
-const getGameParameters = () => {
-  let startNumber = getRandomInt(100);
-  const delta = getRandomInt(5);
-  const strLen = 10;
-  const str = [];
+  const delta = getRandomInt(1, 5);
+  const arr = [];
 
-  for (let i = 0; i < strLen; i += 1) {
+  for (let i = 0; i < progressionLen; i += 1) {
     startNumber += delta;
-    str.push(startNumber);
+    arr.push(startNumber);
   }
 
-  const randomNumber = getRandomInt(str.length);
-  const correctAnswer = str[randomNumber];
-  str[randomNumber] = '..';
+  const randomNumber = getRandomInt(0, arr.length);
+  const answer = arr[randomNumber].toString();
 
-  return [`${str}`.replace(/,/g, ' '), correctAnswer.toString()];
+  arr[randomNumber] = '..';
+
+  const question = arr.join(' ');
+
+  return [question, answer];
 };
 
-export default () => startGame(getGameParameters, rules);
+export default () => startGame(generateGameParameters, description);
