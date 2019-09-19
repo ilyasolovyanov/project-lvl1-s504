@@ -1,27 +1,28 @@
-import { startGame, getRandomInt } from '..';
+import startGame from '..';
+import getRandomInt from '../utils/random';
 
 const description = 'What number is missing in the progression?';
-const progressionLen = 10;
+const progressionLength = 10;
 
-const generateGameParameters = () => {
+const generateGameData = () => {
   let startNumber = getRandomInt(10, 100);
 
-  const delta = getRandomInt(1, 5);
-  const arr = [];
+  const difference = getRandomInt(1, 5);
+  const progressionArray = [];
 
-  for (let i = 0; i < progressionLen; i += 1) {
-    startNumber += delta;
-    arr.push(startNumber);
+  for (let i = 0; i < progressionLength; i += 1) {
+    startNumber += difference;
+    progressionArray.push(startNumber);
   }
 
-  const randomNumber = getRandomInt(0, arr.length);
-  const answer = arr[randomNumber].toString();
+  const randomNumber = getRandomInt(0, progressionArray.length - 1);
+  const answer = progressionArray[randomNumber].toString();
 
-  arr[randomNumber] = '..';
+  progressionArray[randomNumber] = '..';
 
-  const question = arr.join(' ');
+  const question = progressionArray.join(' ');
 
   return [question, answer];
 };
 
-export default () => startGame(generateGameParameters, description);
+export default () => startGame(generateGameData, description);

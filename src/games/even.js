@@ -1,13 +1,14 @@
-import { startGame, getRandomInt } from '..';
+import startGame from '..';
+import getRandomInt from '../utils/random';
 
 const isEven = num => (num % 2 === 0);
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 
-const generateGameParameters = () => {
+const generateGameData = () => {
   const question = getRandomInt(10, 100);
-  const answer = (isEven(question)) ? 'yes' : 'no';
+  const answer = isEven(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
-export default () => startGame(generateGameParameters, description);
+export default () => startGame(generateGameData, description);
