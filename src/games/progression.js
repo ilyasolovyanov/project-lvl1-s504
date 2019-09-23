@@ -5,22 +5,22 @@ const description = 'What number is missing in the progression?';
 const progressionLength = 10;
 
 const generateGameData = () => {
-  let startNumber = getRandomInt(10, 100);
+  let firstProgressionElement = getRandomInt(10, 100);
 
   const difference = getRandomInt(1, 5);
-  const progressionArray = [];
+  const progression = [firstProgressionElement];
 
   for (let i = 0; i < progressionLength; i += 1) {
-    startNumber += difference;
-    progressionArray.push(startNumber);
+    firstProgressionElement += difference;
+    progression.push(firstProgressionElement);
   }
 
-  const randomNumber = getRandomInt(0, progressionArray.length - 1);
-  const answer = progressionArray[randomNumber].toString();
+  const randomProgressionElement = getRandomInt(0, progression.length - 1);
+  const answer = progression[randomProgressionElement].toString();
 
-  progressionArray[randomNumber] = '..';
+  progression[randomProgressionElement] = '..';
 
-  const question = progressionArray.join(' ');
+  const question = progression.join(' ');
 
   return [question, answer];
 };

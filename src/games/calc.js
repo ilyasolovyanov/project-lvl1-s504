@@ -19,8 +19,11 @@ const generateGameData = () => {
     case '-':
       answer = (a - b);
       break;
-    default:
+    case '*':
       answer = (a * b);
+      break;
+    default:
+      return false;
   }
 
   return [question, answer.toString()];
